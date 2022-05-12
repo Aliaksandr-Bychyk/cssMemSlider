@@ -13,20 +13,23 @@
 <body>
   <div class="canvas">
     <div class="slider">
-      <span class="slide --slide-1"></span>
-      <span class="slide --slide-2"></span>
-      <span class="slide --slide-3"></span>
-      <span class="slide --slide-4"></span>
+      <div class="slides-container">
+        <span id="slide-1" class="slide --slide-1"></span>
+        <span id="slide-2" class="slide --slide-2"></span>
+        <span id="slide-3" class="slide --slide-3"></span>
+        <span id="slide-4" class="slide --slide-4"></span>
+      </div>
     </div>
     <div class="slider-buttom">
       <div class="slider-text-container">
         <span>General Kenobi</span>
       </div>
       <div class="slider-buttons-container">
-        <span class="slider-button active"></span>
-        <span class="slider-button"></span>
-        <span class="slider-button"></span>
-        <span class="slider-button"></span>
+
+        <input id="radio-1" type="radio" name="slider-input" checked>
+        <input id="radio-2" type="radio" name="slider-input">
+        <input id="radio-3" type="radio" name="slider-input">
+        <input id="radio-4" type="radio" name="slider-input">
       </div>
     </div>
 

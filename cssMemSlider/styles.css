@@ -14,16 +14,22 @@ body {
 .canvas {
   display: block;
   width: 60vw;
-  height: fit-content
+  height: fit-content;
 }
 .slider {
   display: flex;
   width: 60vw;
   height: 30vw;
   border-radius: 1vw;
-  overflow: hidden;
   box-shadow: 0 1vh 1vh 0 rgba(0, 0, 0, 0.25);
   margin-bottom: 2vh;
+
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.slides-container {
+  display: flex;
+  transition: 0.3s;
 }
 .slide {
   display: block;
@@ -78,4 +84,15 @@ body {
 .slider-button.active {
   background-color: #8a2be2;
   box-shadow: 0 1vh 1vh 0 rgba(0, 0, 0, 0.25);
+}
+
+input {
+  cursor: pointer;
+}
+
+.slider-buttom .slider-buttons-container #radio-1:checked ~ .da {
+  background-color: red;
+}
+#radio-2:checked ~ .slider .slides-container {
+  margin-left: -100%;
 }
