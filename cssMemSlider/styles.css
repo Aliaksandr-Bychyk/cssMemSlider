@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+}
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas {
+  display: block;
+  width: 60vw;
+  height: fit-content
+}
+.slider {
+  display: flex;
+  width: 60vw;
+  height: 30vw;
+  border-radius: 1vw;
+  overflow: hidden;
+  box-shadow: 0 1vh 1vh 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 2vh;
+}
+.slide {
+  display: block;
+  width: 60vw;
+  height: 30vw;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.slide.--slide-1 {
+  background-image: url("img/helloThere.jpg");
+}
+.slide.--slide-2 {
+  background-image: url("img/loop.jpg");
+  background-size: contain;
+}
+.slide.--slide-3 {
+  background-image: url("img/freeSpeech.jpg");
+}
+.slide.--slide-4 {
+  background-image: url("img/minecraft.jpg");
+}
+.slider-buttom {
+  display: flex;
+  height: 3vw;
+  justify-content: space-between;
+}
+.slider-text-container {
+  line-height: 3vw;
+  font-size: 2.5vh;
+  font-weight: 500;
+}
+.slider-buttons-container {
+  display: flex;
+  gap: 1vw;
+}
+.slider-button {
+  padding: 1vw;
+  width: 1rem;
+  height: 1rem;
+  background-color: #571099;
+  border-radius: 100%;
+  cursor: pointer;
+  background-clip: content-box, padding-box;
+}
+.slider-button:hover {
+  background-color: #8a2be2;
+}
+.slider-button.active {
+  background-color: #8a2be2;
+  box-shadow: 0 1vh 1vh 0 rgba(0, 0, 0, 0.25);
+}
