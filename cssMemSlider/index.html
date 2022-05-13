@@ -12,6 +12,12 @@
 </head>
 <body>
   <div class="canvas">
+
+    <input id="radio-1" type="radio" name="slider-input" checked>
+    <input id="radio-2" type="radio" name="slider-input">
+    <input id="radio-3" type="radio" name="slider-input">
+    <input id="radio-4" type="radio" name="slider-input">
+
     <div class="slider">
       <div class="slides-container">
         <span id="slide-1" class="slide --slide-1"></span>
@@ -20,16 +26,27 @@
         <span id="slide-4" class="slide --slide-4"></span>
       </div>
     </div>
+
     <div class="slider-buttom">
       <div class="slider-text-container">
-        <span>General Kenobi</span>
+        <span class="slider-text">General Kenobi</span>
+        <span class="slider-text">for (let i = 0; i < 5; i++) {}</span>
+        <span class="slider-text">I can do whatever I want to!</span>
+        <span class="slider-text">HAHAHA</span>
       </div>
       <div class="slider-buttons-container">
-
-        <input id="radio-1" type="radio" name="slider-input" checked>
-        <input id="radio-2" type="radio" name="slider-input">
-        <input id="radio-3" type="radio" name="slider-input">
-        <input id="radio-4" type="radio" name="slider-input">
+        <label class="slide-1" for="radio-1">
+          <i></i>
+        </label>
+        <label class="slide-2" for="radio-2">
+          <i></i>
+        </label>
+        <label class="slide-3" for="radio-3">
+          <i></i>
+        </label>
+        <label class="slide-4" for="radio-4">
+          <i></i>
+        </label>
       </div>
     </div>
 
