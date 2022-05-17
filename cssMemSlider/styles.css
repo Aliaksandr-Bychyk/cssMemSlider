@@ -189,7 +189,7 @@ input {
 .slide-3:active i {
   transform: scale(140%);
 }
-.slide-3:active i {
+.slide-4:active i {
   transform: scale(140%);
 }
 @media (max-width: 767px) {
