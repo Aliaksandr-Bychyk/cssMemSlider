@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+}
+html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas {
+  display: block;
+  width: 60vw;
+  height: fit-content;
+}
+.slider {
+  display: flex;
+  width: 60vw;
+  height: 30vw;
+  border-radius: 1vw;
+  box-shadow: 0 1vh 1vh 0 rgba(0, 0, 0, 0.25);
+  margin-bottom: 2vh;
+
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.slides-container {
+  display: flex;
+  transition: 0.3s;
+}
+.slide {
+  display: block;
+  width: 60vw;
+  height: 30vw;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.slide.--slide-1 {
+  background-image: url("img/helloThere.jpg");
+}
+.slide.--slide-2 {
+  background-image: url("img/loop.jpg");
+  background-size: contain;
+}
+.slide.--slide-3 {
+  background-image: url("img/freeSpeech.jpg");
+}
+.slide.--slide-4 {
+  background-image: url("img/minecraft.jpg");
+}
+.slider-buttom {
+  display: flex;
+  height: 3vw;
+  justify-content: space-between;
+  overflow: hidden; 
+}
+.slider-text-container {
+  display: flex;
+  line-height: 100%;
+  font-size: 2.5vh;
+  font-weight: 500;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.slider-text {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 60vw;
+}
+.slider-buttons-container {
+  display: flex;
+  align-items: center;
+}
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 2vw;
+  width: 2vw;
+}
+i {
+  display: inline-block;
+  width: 40%;
+  height: 40%;
+  background-color: #571099;
+  border-radius: 100%;
+  cursor: pointer;
+  background-clip: content-box, padding-box;
+  transition: 0.3s;
+}
+label:hover i,
+i:hover {
+  background-color: #be7dfa;
+  box-sizing: border-box;
+  border: none;
+}
+
+input {
+  display: none;
+}
+
+#radio-1:checked ~ .slider .slides-container {
+  margin-left: 0;
+}
+#radio-2:checked ~ .slider .slides-container {
+  margin-left: -100%;
+}
+#radio-3:checked ~ .slider .slides-container {
+  margin-left: -200%;
+}
+#radio-4:checked ~ .slider .slides-container {
+  margin-left: -300%;
+}
+
+#radio-1:checked ~ .slider-buttom .slider-text-container {
+  margin-left: 0;
+}
+#radio-2:checked ~ .slider-buttom .slider-text-container {
+  margin-left: -100%;
+}
+#radio-3:checked ~ .slider-buttom .slider-text-container {
+  margin-left: -200%;
+}
+#radio-4:checked ~ .slider-buttom .slider-text-container {
+  margin-left: -300%;
+}
+
+#radio-1:checked ~ .slider-buttom .slider-buttons-container .slide-1 i {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: #571099 solid 0.1rem;
+}
+#radio-2:checked ~ .slider-buttom .slider-buttons-container .slide-2 i  {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: #571099 solid 0.1rem;
+}
+#radio-3:checked ~ .slider-buttom .slider-buttons-container .slide-3 i  {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: #571099 solid 0.1rem;
+}
+#radio-4:checked ~ .slider-buttom .slider-buttons-container .slide-4 i  {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: #571099 solid 0.1rem;
+}
+
+#radio-1:checked ~ .slider-buttom .slider-buttons-container .slide-1:hover i {
+  background-color: #be7dfa;
+}
+#radio-2:checked ~ .slider-buttom .slider-buttons-container .slide-2:hover i {
+  background-color: #be7dfa;
+}
+#radio-3:checked ~ .slider-buttom .slider-buttons-container .slide-3:hover i {
+  background-color: #be7dfa;
+}
+#radio-4:checked ~ .slider-buttom .slider-buttons-container .slide-4:hover i {
+  background-color: #be7dfa;
+}
+
+#radio-1:checked ~ .slider-buttom .slider-buttons-container .slide-1:active i {
+  transform: scale(140%);
+}
+#radio-2:checked ~ .slider-buttom .slider-buttons-container .slide-2:active i {
+  transform: scale(140%);
+}
+#radio-3:checked ~ .slider-buttom .slider-buttons-container .slide-3:active i {
+  transform: scale(140%);
+}
+#radio-4:checked ~ .slider-buttom .slider-buttons-container .slide-4:active i {
+  transform: scale(140%);
+}
+
+.slide-1:active i {
+  transform: scale(140%);
+}
+.slide-2:active i {
+  transform: scale(140%);
+}
+.slide-3:active i {
+  transform: scale(140%);
+}
+.slide-4:active i {
+  transform: scale(140%);
+}
+@media (max-width: 767px) {
+  .canvas {
+    width: 80vw;
+  }
+  .slider {
+    width: 80vw;
+    height: 40vw;
+  }
+  .slide {
+    width: 80vw;
+    height: 40vw;
+  }
+  .slider-buttom {
+    height: auto;
+    flex-direction: column-reverse;
+    gap: 1vh;
+  }
+  .slider-text {
+    width: 80vw;
+  }
+  .slider-buttons-container {
+    align-self: center;
+  }
+  label {
+    height: 4vw;
+    width: 4vw;
+  }
+}
+
+@media (max-width: 767px) {
+  label {
+    height: 6vw;
+    width: 6vw;
+  }
+}
