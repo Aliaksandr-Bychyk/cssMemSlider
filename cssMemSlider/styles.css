@@ -167,6 +167,31 @@ input {
   background-color: #be7dfa;
 }
 
+#radio-1:checked ~ .slider-buttom .slider-buttons-container .slide-1:active i {
+  transform: scale(140%);
+}
+#radio-2:checked ~ .slider-buttom .slider-buttons-container .slide-2:active i {
+  transform: scale(140%);
+}
+#radio-3:checked ~ .slider-buttom .slider-buttons-container .slide-3:active i {
+  transform: scale(140%);
+}
+#radio-4:checked ~ .slider-buttom .slider-buttons-container .slide-4:active i {
+  transform: scale(140%);
+}
+
+.slide-1:active i {
+  transform: scale(140%);
+}
+.slide-2:active i {
+  transform: scale(140%);
+}
+.slide-3:active i {
+  transform: scale(140%);
+}
+.slide-3:active i {
+  transform: scale(140%);
+}
 @media (max-width: 767px) {
   .canvas {
     width: 80vw;
